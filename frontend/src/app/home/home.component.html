@@ -1,0 +1,40 @@
+<div class="home-container">
+  <header class="header">
+    <h1>Welcome to Football Manager</h1>
+    <p>Your ultimate source for football data and stats.</p>
+  </header>
+
+  <main class="main-content">
+    <section class="import-section">
+      <h2>Import League Data</h2>
+      <p>
+        Start by importing league data to get the latest teams and player
+        information.
+      </p>
+      <a
+        [routerLink]="isImportButtonDisabled ? null : ['/import']"
+        class="button"
+        [class.disabled]="isImportButtonDisabled"
+        (click)="onImportClick()"
+      >
+        <span *ngIf="!isImportButtonDisabled">Import League</span>
+        <span *ngIf="isImportButtonDisabled">Wait {{ countdown }}s</span>
+      </a>
+    </section>
+
+    <section class="teams-section">
+      <h2>View Teams</h2>
+      <p>
+        Browse through the teams in various leagues and see detailed
+        information.
+      </p>
+      <a
+        *ngFor="let league of importedLeagues"
+        [routerLink]="['/teams', league.code]"
+        class="button"
+      >
+        {{ league.name }} Teams
+      </a>
+    </section>
+  </main>
+</div>

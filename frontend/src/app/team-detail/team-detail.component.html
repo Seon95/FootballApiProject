@@ -1,0 +1,59 @@
+<div class="team-detail" *ngIf="team">
+  <!-- Botón para volver a la página principal -->
+  <a [routerLink]="['/']" class="home-button">Home</a>
+
+  <header class="team-header">
+    <!-- Imagen del escudo del equipo con el alt dinámico -->
+    <img [src]="team.crest" alt="{{ team.name }} crest" class="team-crest" />
+    <div class="team-info">
+      <!-- Información básica del equipo -->
+      <h2>{{ team.name }}</h2>
+      <p><strong>Short Name:</strong> {{ team.shortName }}</p>
+      <p><strong>Team Code:</strong> {{ team.tla }}</p>
+    </div>
+  </header>
+
+  <section class="players-section">
+    <h3>Players</h3>
+    <div class="players-list">
+      <!-- Itera sobre un array de posiciones predefinidas -->
+      <div
+        class="position-group"
+        *ngFor="
+          let position of [
+            'Goalkeeper',
+            'Defence',
+            'Centre-Back',
+            'Left-Back',
+            'Right-Back',
+            'Central Midfield',
+            'Defensive Midfield',
+            'Attacking Midfield',
+            'Offence',
+            'Right Winger',
+            'Left Winger',
+            'Centre-Forward'
+          ]
+        "
+      >
+        <!-- Título para cada grupo de posición -->
+        <h4>{{ position }}s</h4>
+        <div class="player-cards">
+          <!-- Filtra y muestra los jugadores de acuerdo a su posición -->
+          <div
+            class="player-card"
+            *ngFor="let player of getPlayersByPosition(position)"
+          >
+            <!-- Información de cada jugador -->
+            <p><strong>Name:</strong> {{ player.name }}</p>
+            <p><strong>Position:</strong> {{ player.position }}</p>
+            <p>
+              <strong>Date of Birth:</strong> {{ player.dateOfBirth | date }}
+            </p>
+            <p><strong>Nationality:</strong> {{ player.nationality }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

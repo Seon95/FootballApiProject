@@ -1,0 +1,123 @@
+.team-list-container {
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #3498db;
+  margin-bottom: 25px;
+  font-size: 2.5em;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.search-container {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  background: #2c3e50;
+  color: #ecf0f1;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+  color: #bdc3c7;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #2980b9;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+.list-container {
+  background: rgba(52, 73, 94, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 15px;
+}
+
+li {
+  background: #34495e;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+a {
+  text-decoration: none;
+  color: #3498db;
+  font-size: 1.1em;
+  display: block;
+  padding: 15px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #16a085, #1abc9c);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-button:hover {
+  background: linear-gradient(to right, #1abc9c, #16a085);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .team-list-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  input[type="text"],
+  .home-button {
+    font-size: 1em;
+  }
+
+  ul {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

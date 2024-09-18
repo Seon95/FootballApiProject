@@ -1,0 +1,27 @@
+<div class="team-list-container">
+  <h2>Teams in {{ leagueName }}</h2>
+  <!-- Muestra el nombre de la liga -->
+
+  <!-- Contenedor para la barra de búsqueda -->
+  <div class="search-container">
+    <input
+      type="text"
+      placeholder="Search by team name"
+      (input)="onSearchTermChange($event)"
+    />
+  </div>
+
+  <!-- Contenedor de la lista de equipos -->
+  <div class="list-container">
+    <ul>
+      <!-- Itera sobre los equipos filtrados y genera un enlace a los detalles del equipo -->
+      <li *ngFor="let team of filteredTeams">
+        <a [routerLink]="['/team', team.id]">{{ team.name }}</a>
+        <!-- Muestra el nombre del equipo -->
+      </li>
+    </ul>
+  </div>
+
+  <!-- Enlace para volver a la página principal -->
+  <a [routerLink]="['/']" class="home-button">Home</a>
+</div>

@@ -1,0 +1,101 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #1a2a3a;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.home-container {
+  line-height: 1.6;
+  color: #f0f0f0;
+  background-color: #1a2a3a;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  background-color: #0f1c2a;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5em; /* Ajusta el tamaño de fuente según sea necesario */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  gap: 20px; /* Espaciado entre los elementos */
+}
+
+.import-section,
+.teams-section {
+  background-color: #2c3e50;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1; /* Permite que los elementos crezcan para llenar el espacio disponible */
+  min-width: 300px; /* Ancho mínimo para evitar que se reduzcan demasiado en pantallas pequeñas */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.import-section h2,
+.teams-section h2 {
+  color: #ecf0f1;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.import-section p,
+.teams-section p {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #bdc3c7;
+}
+
+.button {
+  display: block;
+  padding: 12px 24px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.import-section .button {
+  background-color: #d35400;
+}
+
+.import-section .button:hover {
+  background-color: #e67e22;
+}
+
+.teams-section .button {
+  background-color: #27ae60;
+}
+
+.teams-section .button:hover {
+  background-color: #2ecc71;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+}

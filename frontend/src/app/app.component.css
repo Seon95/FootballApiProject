@@ -1,0 +1,9 @@
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  background-attachment: fixed;
+  color: #f0f0f0;
+  font-family: "Roboto", Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}

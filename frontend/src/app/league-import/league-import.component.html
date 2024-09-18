@@ -1,0 +1,35 @@
+<div class="import-container">
+  <header class="header">
+    <h1>Import League Data</h1>
+    <p>
+      Start by importing league data to get the latest teams and player
+      information.
+    </p>
+  </header>
+
+  <main class="main-content">
+    <section class="import-section">
+      <h2>Import League</h2>
+      <!-- Formulario para seleccionar e importar una liga -->
+      <form (ngSubmit)="importLeague()">
+        <label for="league">Select a league:</label>
+        <!-- Select para elegir una liga del array leagues -->
+        <select id="league" [(ngModel)]="leagueCode" name="league">
+          <option *ngFor="let league of leagues" [value]="league.code">
+            {{ league.name }}
+          </option>
+        </select>
+        <!-- Botón de envío con texto dinámico basado en el estado de carga -->
+        <button type="submit" class="button" [disabled]="isLoading">
+          <span *ngIf="!isLoading">Import League</span>
+          <span *ngIf="isLoading">Importing...</span>
+        </button>
+      </form>
+      <!-- Indicador de carga, visible solo mientras isLoading es verdadero -->
+      <div *ngIf="isLoading" class="loader"></div>
+    </section>
+  </main>
+
+  <!-- Enlace para volver a la página principal -->
+  <a [routerLink]="['/']" class="home-button">Back to Home</a>
+</div>
