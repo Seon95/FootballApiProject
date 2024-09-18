@@ -42,7 +42,7 @@ Sigue estos pasos para instalar y configurar el proyecto en tu entorno local:
    Inicia el servidor del backend con el siguiente comando, lo que también creará la base de datos:
 
    ```bash
-   npx ts-node src/index.ts
+   npm start
    ```
 
 3. **Instala las dependencias del frontend**
@@ -68,7 +68,7 @@ Sigue estos pasos para instalar y configurar el proyecto en tu entorno local:
    - **Para el frontend**:
 
      ```bash
-     ng serve
+     npm start
      ```
 
 6. **Accede a la aplicación**
