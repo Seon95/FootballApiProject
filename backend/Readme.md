@@ -84,4 +84,4 @@ Las relaciones entre los modelos son:
 ## Configuración del Entorno
 
 Asegúrate de tener configuradas las variables de entorno necesarias en el archivo `.env`. La clave API para la API de fútbol es esencial para que las solicitudes a la API externa funcionen correctamente.
-Obtén aqui la clave API :https://www.football-data.org/client/register
+Obtén aquí la clave API :https://www.football-data.org/client/register
