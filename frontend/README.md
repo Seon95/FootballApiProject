@@ -1,27 +1,42 @@
-# Footballproj
+# Frontend de la API de Fútbol
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+Este es el frontend para el proyecto **FootballApiProject**. Está desarrollado con Angular y proporciona una interfaz para interactuar con la API de fútbol, mostrando información sobre ligas, equipos y jugadores.
 
-## Development server
+## Estructura del Proyecto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+El frontend está compuesto por varios componentes y servicios que permiten importar datos, visualizar equipos y obtener detalles de equipos. A continuación se describe la estructura principal:
 
-## Code scaffolding
+### Componentes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **HomeComponent**: Página principal que proporciona acceso a otras secciones de la aplicación.
+- **LeagueImportComponent**: Permite importar datos de ligas de fútbol usando un formulario.
+- **TeamListComponent**: Muestra una lista de equipos para una liga específica.
+- **TeamDetailComponent**: Muestra los detalles de un equipo específico y su lista de jugadores.
 
-## Build
+### Servicios
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **LeagueService**: Proporciona métodos para obtener información sobre ligas.
+- **FootballService**: Interactúa con la API del backend para obtener datos de ligas, equipos y jugadores.
+- **CountdownService**: Maneja un temporizador para controlar la importación de datos y el estado del botón de importación.
 
-## Running unit tests
+## Configuración de Rutas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Las rutas están configuradas en `app-routing.module.ts` y permiten la navegación entre diferentes secciones de la aplicación:
 
-## Running end-to-end tests
+- Inicio: `/`
+- Importar Ligas: `/import`
+- Lista de Equipos: `/teams/:leagueCode`
+- Detalles del Equipo: `/team/:teamId`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Instalación
 
-## Further help
+Para la instalación y el uso del frontend , revisa el README global
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Uso
+
+1. **Página de Inicio**: Navega a través de las diferentes secciones de la aplicación.
+2. **Importar Datos de Liga**: Utiliza el formulario de importación para obtener datos de ligas específicas.
+3. **Ver Equipos**: Explora los equipos de las ligas importadas.
+4. **Detalles del Equipo**: Accede a información detallada sobre equipos específicos y sus jugadores.
+
+La aplicación estará disponible en http://localhost:4200 después de seguir los pasos de instalación y ejecución descritos en el README principal.

@@ -74,3 +74,12 @@ Sigue estos pasos para instalar y configurar el proyecto en tu entorno local:
 6. **Accede a la aplicación**
 
    Abre tu navegador y visita `http://localhost:4200` para ver la aplicación en funcionamiento.
+
+## Documentación adicional
+
+Tanto el frontend como el backend tienen sus propios archivos README con información más detallada sobre su configuración y funcionamiento:
+
+- Para más información sobre el backend, consulta el archivo `backend/README.md`.
+- Para más detalles sobre el frontend, revisa el archivo `frontend/README.md`.
+
+Estos README específicos contienen información más detallada sobre la estructura, configuración y uso de cada parte del proyecto.
